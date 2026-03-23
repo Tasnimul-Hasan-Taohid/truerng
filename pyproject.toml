@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "truerng"
+version = "0.1.0"
+description = "True random number generation using OS-level entropy"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = ["random", "entropy", "cryptography", "urandom", "true random"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography",
+    "Intended Audience :: Developers",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/truerng"
+Issues = "https://github.com/yourusername/truerng/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["truerng*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
